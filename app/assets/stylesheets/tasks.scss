@@ -1,3 +1,36 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: linear-gradient(45deg, #00E064, #00C5F7);
+}
+
+p {
+
+}
+
+h1 {
+  color: #0076f4;
+  font-family: 'Crimson Text', serif;
+}
+
+a {
+  color: #8e0707;
+  font-family: 'Crimson Text', serif;
+}
+
+a:hover {
+  color: green;
+  font-family: 'Crimson Text', serif;
+}
+
+a:active {
+color: #0076f4;
+font-family: 'Crimson Text', serif;
+}
+
+a:visited{
+  color: #eac100;
+  font-family: 'Crimson Text', serif;
+}
