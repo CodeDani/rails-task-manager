@@ -1,0 +1,28 @@
+<body>
+  <h1>
+    MY TASKS:
+  </h1>
+  <% @tasks.each do |tax| %>
+<% if tax.completed %>
+      <div>
+        <input type="checkbox" name="task" checked>
+        <label for="task"><%= link_to tax.title, "tasks/#{tax.id}" %></label>
+        <%= link_to "Edit", "tasks/#{tax.id}/edit"  %>
+        <%= link_to "🗑", "tasks/#{tax.id}", method: :delete, data: { confirm: "Are you sure?" } %>
+       </div>
+    <% else %>
+      <div>
+        <input type="checkbox" name="task">
+        <label for="task"><%= link_to tax.title, "tasks/#{tax.id}" %></label>
+        <%= link_to "Edit", "tasks/#{tax.id}/edit"  %>
+        <%= link_to "🗑", "tasks/#{tax.id}", method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
+<% end %>
+
+<div>
+  <%= link_to "Create a new task", tasks_new_path  %>
+</div>
+
+
+</body>
